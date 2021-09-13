@@ -5,7 +5,7 @@ About the project
 
 API testing
 =
-<code>http://localhost:5000/swagger-ui.html</code>
+[Swagger API](http://localhost:5000/swagger-ui.html)
 
 Project setup
 =
