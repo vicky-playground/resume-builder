@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.sedia.resume.repository.TemplateMapper">
+
+ <resultMap id="TemplateResultMap" type="com.sedia.resume.entity.TemplateEntity">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+      <result column="NAME" property="name" jdbcType="CHAR"/>
+        <result column="BASIC_INFO_LIMIT" property="basicInfo" jdbcType="INTEGER"/>
+        <result column="EDUCATION_LIMIT" property="education" jdbcType="INTEGER"/>
+         <result column="EXPERIENCE_LIMIT" property="experience" jdbcType="INTEGER"/>
+        <result column="SKILL_LIMIT" property="skill" jdbcType="INTEGER"/>
+         <result column="LICENSE_LIMIT" property="licence" jdbcType="INTEGER"/>
+        <result column="LANGUAGE_LIMIT" property="language" jdbcType="INTEGER"/>
+         <result column="FEATURE_LIMIT" property="feature" jdbcType="INTEGER"/>
+        <result column="LINK_LIMIT" property="link" jdbcType="INTEGER"/>
+        <result column="CR_USER" property="createUser" jdbcType="CHAR"/>
+        <result column="CR_DATETIME" property="createDate" jdbcType="TIMESTAMP"/>
+        <result column="UP_USER" property="updateUser" jdbcType="CHAR"/>
+        <result column="UP_DATETIME" property="updateDate" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <select id="listTemplate" resultMap="TemplateResultMap">
+        SELECT * FROM template;
+    </select>
+    
+    <select id="firstTemplate" resultMap="TemplateResultMap">
+        SELECT * FROM template WHERE ID = #{id};
+    </select>
+
+   
+
+</mapper>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.sedia.resume.repository.LinkMapper">
+
+    <resultMap id="result" type="com.sedia.resume.entity.LinkEntity">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="UID" property="uid" jdbcType="INTEGER"/>
+        <result column="PLATFORM" property="platform" jdbcType="VARCHAR"/>
+        <result column="URL" property="url" jdbcType="VARCHAR"/>
+        <result column="CR_USER" property="createUser" jdbcType="VARCHAR"/>
+        <result column="CR_DATETIME" property="createDate" jdbcType="TIMESTAMP"/>
+        <result column="UP_USER" property="updateUser" jdbcType="VARCHAR"/>
+        <result column="UP_DATETIME" property="updateDate" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <select id="findAll" resultMap="result">
+        SELECT * FROM link WHERE UID = #{userId};
+    </select>
+    
+
+    <insert id="save" parameterType="com.sedia.resume.entity.LinkEntity" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO link (UID, PLATFORM, URL, CR_USER, CR_DATETIME, UP_USER, UP_DATETIME)
+            VALUES (#{uid}, #{platform}, #{url}, #{createUser}, #{createDate}, #{updateUser}, #{updateDate});
+    </insert>
+
+    <update id="update" parameterType="com.sedia.resume.entity.LinkEntity">
+        UPDATE link SET PLATFORM = #{platform}, URL = #{url}, UP_DATETIME = #{updateDate}
+        WHERE ID = #{id} AND UID = #{uid}
+    </update>
+    
+
+	<delete id="delete">
+  		delete from link where ID = #{id} and UID = #{userId};
+	</delete>
+
+</mapper>

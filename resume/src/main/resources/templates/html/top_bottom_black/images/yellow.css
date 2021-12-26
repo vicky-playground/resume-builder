@@ -1,0 +1,53 @@
+.content {
+    background-color: #7ca5c5;
+    color: #000;
+}
+.column-top {
+    background-color: #f9ff68;
+  }
+
+.column-bottom {
+background-color: #19588a;
+counter-reset: #fff;
+}
+.text-title {
+    color: #1f1f1f;
+    margin-bottom: 5px;
+    border-bottom: #1f1f1f 1px solid;
+  }
+
+  .text-title2 {
+    color: #fff;
+    background-color: #153046;
+  }
+
+  small, h4 small{
+    color:#fffb6f;
+  }
+
+  #user-info p {
+    border-top: #1f1f1f 1px solid;
+    border-bottom: #1f1f1f 1px solid;
+    color: #fff;
+    margin: 0px 20px;
+  }
+
+  .job-title {
+    background-color: #1f1f1f;
+    color: #fff;
+    padding: 10px 20px;
+  }
+
+
+  h6 {
+    background-color: #67551d;
+    color: #fff;
+  }
+
+  #experience, #skill, #education, #autobiography-ch {
+    color: #fff;
+  }
+  .label-main{
+    color: #000;
+    background-color: #c14e27;
+  }

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.sedia.resume.repository.AddressMapper">
+
+    <resultMap id="AddressResultMap" type="com.sedia.resume.entity.AddressEntity">
+        <id column="ID" property="id" jdbcType="INTEGER"/>
+        <result column="CITY" property="city" jdbcType="VARCHAR"/>
+        <result column="TOWN" property="town" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <select id="getAllCities" resultType="String">
+        SELECT CITY FROM address;
+    </select>
+    
+    <select id="getAllTowns" resultType="String">
+        SELECT TOWN FROM address  WHERE CITY = #{city};
+    </select>
+
+   <!--  <select id="selectCityById" resultMap="AddressResultMap">
+        SELECT CITY FROM ADDRESS  WHERE ID = #{id};
+    </select>
+    
+    <select id="selectTownById" resultMap="AddressResultMap">
+        SELECT TOWN FROM ADDRESS  WHERE ID = #{id};
+    </select> -->
+    
+ 
+</mapper>

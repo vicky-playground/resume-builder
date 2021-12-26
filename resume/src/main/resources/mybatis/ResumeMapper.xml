@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.sedia.resume.repository.ResumeMapper">
+
+<resultMap id="ResumeResultMap" type="com.sedia.resume.entity.ResumeEntity">
+        <id column="id" property="id" jdbcType="INTEGER"/>
+        <result column="UID" property="uid" jdbcType="INTEGER"/>
+        <result column="TEMPLATE_ID" property="templateID" jdbcType="INTEGER"/>
+        <result column="RESUME_NAME" property="resumeName" jdbcType="VARCHAR"/>
+        <result column="BASIC_INFO_COLUMNS" property="basicInfo" jdbcType="VARCHAR"/>
+        <result column="FILE_PATH" property="filePath" jdbcType="VARCHAR"/>
+        <result column="CR_USER" property="createUser" jdbcType="VARCHAR"/>
+        <result column="CR_DATETIME" property="createDate" jdbcType="TIMESTAMP"/>
+        <result column="UP_USER" property="updateUser" jdbcType="VARCHAR"/>
+        <result column="UP_DATETIME" property="updateDate" jdbcType="TIMESTAMP"/>
+        <result column="BIO_CH" property="bioCh" jdbcType="TINYINT"/>
+        <result column="BIO_EN" property="bioEn" jdbcType="TINYINT"/>
+    </resultMap>
+
+    <select id="listResume" resultMap="ResumeResultMap">
+        SELECT * FROM resume WHERE UID = #{uid};
+    </select>
+
+    <select id="firstResume" resultMap="ResumeResultMap">
+        SELECT * FROM resume WHERE ID = #{id} and uid = #{uid};
+    </select>
+
+    <insert id="insertResume" parameterType="com.sedia.resume.entity.ResumeEntity" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO resume (UID, TEMPLATE_ID, RESUME_NAME, BASIC_INFO_COLUMNS, FILE_PATH, CR_USER, CR_DATETIME, UP_USER, UP_DATETIME)
+   VALUES (#{uid}, #{templateID}, #{resumeName}, #{basicInfo}, #{filePath},  #{createUser}, #{createDate}, #{updateUser}, #{updateDate});
+    </insert>
+
+    <update id="updateResume" parameterType="com.sedia.resume.entity.ResumeEntity" useGeneratedKeys="true" keyProperty="id">
+        UPDATE resume SET
+        UID = #{uid}, TEMPLATE_ID = #{templateID}, RESUME_NAME = #{resumeName}, BASIC_INFO_COLUMNS = #{basicInfo}, FILE_PATH = #{filePath},  UP_USER = #{updateUser}, UP_DATETIME= #{updateDate}
+        where id = #{id} and uid = #{uid};
+	</update>
+
+	<delete id="deleteResume">
+  		delete from resume where id = #{id} and uid = #{uid};
+	</delete>
+
+	 <update id="updateBasicInfo" parameterType="com.sedia.resume.entity.ResumeEntity" useGeneratedKeys="false" keyProperty="id">
+        UPDATE resume SET
+        BASIC_INFO_COLUMNS = #{basicInfo}
+        where id = #{id} and uid = #{uid};
+	</update>
+
+    <update id="updateFilePath">
+        UPDATE resume SET
+            FILE_PATH = #{filePath}
+        where id = #{id} and uid = #{uid};
+    </update>
+
+
+  <update id="updateBio">
+    UPDATE resume SET
+      BIO_CH = #{bioCh}, BIO_EN = #{bioEn}
+    where id = #{id} and uid = #{uid};
+  </update>
+
+  <update id="updateTemplateId">
+    UPDATE resume SET TEMPLATE_ID = #{tid}
+    where id = #{id} and uid = #{uid};
+  </update>
+
+
+</mapper>

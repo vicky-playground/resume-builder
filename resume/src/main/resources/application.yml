@@ -1,0 +1,58 @@
+server:
+  port: 5000
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: mappings,env,beans,conditions
+
+mybatis:
+  mapper-locations: classpath:mybatis/*.xml
+
+aws:
+  s3:
+    bucket-name: resume-backend-storage
+
+cloud:
+  aws:
+    credentials:
+      access-key: AKIAXIGZRDI4AHSU5TEO
+      secret-key: ENC(TkfDpdf/Sx4ZdU/F4yy99Ri3GVYXDxT7crfNceIZVRZ5oQMYn2ypni8Bx2E3C9VPf+WueDj4VLkiE69CReB3LpcaoSMauTs/ThTzoFVgey8=)
+    region:
+      static: ap-northeast-1
+      auto: false
+    stack:
+      auto: false
+    s3:
+      bucket-name: resume-backend-storage
+
+spring:
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+      file-size-threshold: 2MB
+#  rabbitmq:
+#    addresses: amqps://b-f593bcba-50f8-4324-abfc-bf3a6ca624b6.mq.ap-northeast-1.amazonaws.com
+#    port: 5671
+#    username: root
+#    password: ENC(Kd3Mg7odDUXoLoRpfUp0kLpadOlmLT8ueGJtskcLAwb2JjywsOGqn2uyalzIdqhX)
+
+jasypt:
+  encryptor:
+    password: resume
+
+sendgrid:
+  api-key: ENC(RL/YEV8X22wtYMGEktgFxVo34nUEmzyavLYPE772zjRRdEHjQmUU2sM/Q0Plm0u5jp1KlU3iIyDuuDmpOhzzCuYl5gfTy66pQRTg8MaNyeHWbnB1du5xZd9D7eZkYMwhsVOLImQ6H7HMT0s3enF/XQ==)
+
+logging:
+  level:
+    com.sedia.resume: debug
+
+resume:
+  mail:
+    from: wade5141000@outlook.com
+    from-name: resume-service
+    frontend-host: http://resume-web.s3-website-ap-northeast-1.amazonaws.com/
+
