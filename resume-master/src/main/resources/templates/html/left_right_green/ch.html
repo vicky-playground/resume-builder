@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="html/left_right_green/images/green.css" rel="stylesheet">
+  <style type="text/css">
+    @page {
+      size: A4;
+      margin: 0;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .content {
+      width: 210mm;
+      height: 297mm;
+      margin: 0 auto;
+      background-color: #F5FAFA;
+    }
+
+    section {
+      margin: 20px 0;
+    }
+    .column-left{
+      width:33.33%;
+      height: 297mm;
+      float: left;
+    }
+    .column-right{
+      width:66.66%;
+      height: 297mm;
+      float: right;
+    }
+
+    .text-white {
+      color: white;
+    }
+
+    .mt-1 {
+      margin: 15px 0;
+    }
+    .ml-1{margin-left: 15px;}
+    .m-0{margin: 0;}
+    .p-0{padding: 0;}
+
+    .p-1 {
+      padding: 10px;
+    }
+
+    .p-2 {
+      padding: 20px;
+    }
+
+    .py-1 {
+      padding: 15px 0;
+    }
+
+    .py-2 {
+      padding: 20px 0;
+    }
+
+    .border-bottom {
+      border-bottom: 1px solid;
+    }
+    .border-none{
+      border: none;
+    }
+
+    .d-inline {
+      display: inline
+    }
+
+    .bg-white {
+      background-color: #fff;
+    }
+
+    .dl-horizontal dt {
+      float: left;
+      width: 60px;
+      clear: left;
+      text-align: right;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .dl-horizontal dd {
+      margin-left: 60px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="content">
+    <div>
+      <!-- column left -->
+      <div class="column-left text-center text-white" style="background-color: #0e3d3d; height: 297mm;width: 33.33%;float: left">
+        <img class="img-circle" style="width: 150px;" src="${image}">
+        
+        <!-- 使用者頭像 user-info -->
+        <div id="user-info" class="text-center mt-1">
+          <h4 class="text-title p-1"><strong>${name}</strong></h4>
+          <p>${feature}</p>
+        </div>
+        <!-- 資本資料 basic-info  -->
+        <div id="basic-info" class="p-2 mt-1" style="line-height: 36px;">
+          <h4 class="text-title p-1"><strong>資本資料</strong></h4>
+
+          <#list basicInfo as key, value>
+          <div class="border-bottom text-white">
+            <h6 class="d-inline">
+              ${key} ${value}</h6>
+          </div>
+        </#list>
+
+        </div>
+
+        <!-- 自我介紹 introduction -->
+        <div id="introduction" class="p-2 mt-1">
+          <h4 class="text-title p-1"><strong>自我介紹</strong></h4>
+          <div class="text-white">
+            <span style="line-height: 30px;">${intro}</span>
+          </div>
+        </div>
+
+        <!-- 個人連結 user-link -->
+        <div id="user-link" class="p-2 mt-1">
+          <h4 class="text-title p-1"><strong>個人連結</strong></h4>
+          <dl class="dl-horizontal">
+            <#list links as link>
+            <dt>${link.platform}</dt>
+            <dd>${link.url}</dd>
+          </#list>
+          </dl>
+        </div>
+      </div>
+
+      <!-- column right -->
+      <div class="p-0" style="width: 66.66%;float: right">
+        <!-- 自傳 -->
+        <div id="autobiography-ch">
+          <h4 class="text-title2 p-1 m-0"><strong>中文自傳</strong>(${bioCh?length}字)</h4>
+          <div class="border-none p-1">
+           ${bioCh}
+          </div>
+        </div>
+
+       
+      </div>
+    </div>
+  </div>
+  </div>
+</body>
+
+</html>
