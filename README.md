@@ -17,3 +17,5 @@ Project setup
 > - Visual Studio Code：for FE
 > - Maven：software project management 
 > - Mysql & Workbench：SQL and the operating system
+> 
+![image](https://user-images.githubusercontent.com/90204593/152291242-fb68aac4-eb28-4b39-bd7b-b455e600d234.png)
