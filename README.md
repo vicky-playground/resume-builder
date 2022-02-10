@@ -1,5 +1,7 @@
 Project result: http://resume-web.s3-website-ap-northeast-1.amazonaws.com/
-![Feb-11-2022 02-46-36](https://user-images.githubusercontent.com/90204593/153475939-07e5649c-99f2-459e-b14f-5e0f239dee76.gif)
+
+![Feb-11-2022 02-48-50](https://user-images.githubusercontent.com/90204593/153476345-f85ed601-e73d-4f46-b593-a6bf1dc0f619.gif)
+
 
 About the project
 =
