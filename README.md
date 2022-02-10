@@ -5,7 +5,7 @@ Project result: http://resume-web.s3-website-ap-northeast-1.amazonaws.com/
 
 About the project
 =
-1. Develop a website which helps job seekers create an accessible free resume/CV/personal website builder, for users to build highly-customized and  compelling resumes. 
+1. Develop a resume builder website which helps job seekers create an accessible free resume/CV/personal website, for users to build highly-customized and  compelling resumes. 
 
 
 API testing
