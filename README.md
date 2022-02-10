@@ -1,3 +1,6 @@
+Project result: http://resume-web.s3-website-ap-northeast-1.amazonaws.com/
+![Feb-11-2022 02-46-36](https://user-images.githubusercontent.com/90204593/153475939-07e5649c-99f2-459e-b14f-5e0f239dee76.gif)
+
 About the project
 =
 1. Develop a website which helps job seekers create an accessible free resume/CV/personal website builder, for users to build highly-customized and  compelling resumes. 
