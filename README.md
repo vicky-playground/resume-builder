@@ -27,7 +27,7 @@ Project setup
 
 Work division
 =
-**BE Tasks**
+**BE Tasks:**
 resume - basic info
 resume - education
 resume - autobiography
@@ -36,11 +36,11 @@ resume - skills
 apply resume format
 account setting
 
-**FE Task**
+**FE Task:**
 website wireframe
 resume format
 
-**Deployment**
+**Deployment:**
 login/logout
 signup
 AWS
