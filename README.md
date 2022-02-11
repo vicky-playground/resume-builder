@@ -33,7 +33,7 @@ Work division
 > - resume - autobiography
 > - resume - experience
 > - resume - skills
-> - apply resume format
+> - apply resume template
 > - account setting
 
 **FE:**
