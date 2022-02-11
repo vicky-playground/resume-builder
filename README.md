@@ -28,19 +28,19 @@ Project setup
 Work division
 =
 **BE:**
-resume - basic info
-resume - education
-resume - autobiography
-resume - work expeirence
-resume - skills
-apply resume format
-account setting
+> - resume - basic info
+> - resume - education
+> - resume - autobiography
+> - resume - work expeirence
+> - resume - skills
+> - apply resume format
+> - account setting
 
 **FE:**
-website wireframe
-resume format
+> - website wireframe
+> - resume format
 
 **Deployment:**
-login/logout
-signup
-AWS
+> - login/logout
+> - signup
+> - AWS
