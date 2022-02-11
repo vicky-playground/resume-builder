@@ -31,7 +31,7 @@ Work division
 > - resume - basic info
 > - resume - education
 > - resume - autobiography
-> - resume - work expeirence
+> - resume - experience
 > - resume - skills
 > - apply resume format
 > - account setting
