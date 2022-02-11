@@ -25,7 +25,9 @@ Project setup
 > 
 ![image](https://user-images.githubusercontent.com/90204593/152291242-fb68aac4-eb28-4b39-bd7b-b455e600d234.png)
 
-**BE Tasks:**
+Work division
+=
+**BE Tasks**
 resume - basic info
 resume - education
 resume - autobiography
@@ -34,7 +36,7 @@ resume - skills
 apply resume format
 account setting
 
-**FE TASKS**
+**FE Task**
 website wireframe
 resume format
 
